@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --color-text: #eae2d4;
+  --color-accent: #f3c623;
+  --color-subtext: #cfc6b4;
+  --color-outline: #989080;
+  --color-primary: #e2c46d;
+  --color-primary-foreground: #3c2f00;
+  --color-secondary: #d4c5a1;
+  --color-secondary-foreground: #383016;
+  --color-background: #110e07;
+  --color-background-dt: #171309;
+  --color-foreground: #3d392f;
+  --font-barlow: "Barlow";
+  --font-grotesk: "Anderson Grotesk";
+  --font-sancreek: "Sancreek";
+}
+
+body,
+html,
+#root {
+  @apply text-text font-barlow h-full scroll-smooth;
+}
+
+body {
+  background-image:
+    linear-gradient(theme(--color-background-dt) 1px, transparent 1px),
+    linear-gradient(
+      to right,
+      theme(--color-background-dt) 1px,
+      theme(--color-background) 1px
+    );
+  background-size: 2vw 2vw;
+}
