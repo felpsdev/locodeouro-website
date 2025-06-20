@@ -20,7 +20,7 @@ function Categories(props: CategoriesProps) {
     <div className="group bg-secondary flex h-full w-full cursor-pointer flex-col rounded-md p-6 transition-all">
       <div className="flex h-fit w-full">
         <div className="flex flex-col">
-          <span className="font-grotesk text-3xl leading-none text-neutral-900">
+          <span className="font-grotesk text-3xl leading-none text-neutral-900 uppercase">
             {title}
           </span>
           <span className="text-sm text-neutral-900 opacity-60">
@@ -30,8 +30,10 @@ function Categories(props: CategoriesProps) {
         <Icon className="mr-0 ml-auto min-w-6 text-2xl text-neutral-900" />
       </div>
       <div className="mt-4 flex flex-col gap-2 border-l-2 border-neutral-800 pl-5">
-        {content.map((value) => (
-          <span className="flex leading-none text-neutral-700">{value}</span>
+        {content.map((value, i) => (
+          <span key={i} className="flex leading-none text-neutral-700">
+            {value}
+          </span>
         ))}
       </div>
     </div>

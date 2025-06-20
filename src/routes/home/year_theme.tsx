@@ -1,11 +1,11 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 
-import edgeEnd from "../../assets/landscape/edge_end.png";
-import edgeStart from "../../assets/landscape/edge_start.png";
+import edgeEnd from "../../assets/home/landscape/edge_end.png";
+import edgeStart from "../../assets/home/landscape/edge_start.png";
 
-import layer01 from "../../assets/landscape/layer_1.png";
-import layer02 from "../../assets/landscape/layer_2.png";
+import layer01 from "../../assets/home/landscape/layer_1.png";
+import layer02 from "../../assets/home/landscape/layer_2.png";
 
 function YearTheme() {
   const contentRef = useRef<HTMLDivElement>(null);

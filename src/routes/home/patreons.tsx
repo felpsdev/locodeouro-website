@@ -1,5 +1,5 @@
 function Patreons() {
-  return <div>Patreons</div>;
+  return <div></div>;
 }
 
 export default Patreons;

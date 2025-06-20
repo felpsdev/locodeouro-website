@@ -1,9 +1,19 @@
 @font-face {
-    font-family: 'Anderson Grotesk';
-    src: url('AndersonGroteskBlack.woff2') format('woff2'),
-        url('AndersonGroteskBlack.woff') format('woff');
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
+  font-family: "Anderson Grotesk";
+  src:
+    url("AndersonGroteskBlack.woff2") format("woff2"),
+    url("AndersonGroteskBlack.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
 }
 
+@font-face {
+  font-family: "Horizon";
+  src:
+    url("Horizon.woff2") format("woff2"),
+    url("Horizon.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}

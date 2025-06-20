@@ -1,10 +1,10 @@
-import { useInView } from "motion/react";
+import { motion, useInView } from "motion/react";
 import { useEffect, useRef } from "react";
 import { BsMouse } from "react-icons/bs";
 import { Button } from "../../components/ui";
 
 /* Assets */
-import backgroundAsset from "../../assets/background_video.mp4";
+import backgroundAsset from "../../assets/home/background_video.mp4";
 
 interface IntroductionProps {
   onInViewChange: (inView: boolean) => void;
@@ -30,24 +30,36 @@ function Introduction(props: IntroductionProps) {
       />
       <div className="relative z-10 h-full w-full backdrop-blur-xl">
         <div className="flex h-full w-full flex-col items-center justify-center gap-2">
-          <span className="font-grotesk text-9xl leading-none">
+          <motion.span
+            initial={{ y: -100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.25 }}
+            className="font-grotesk text-9xl leading-none"
+          >
             LOCO DE OURO
-          </span>
-          <span className="text-lg opacity-70">
+          </motion.span>
+          <motion.span
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.75 }}
+            className="text-lg opacity-70"
+          >
             Conheça um pouco mais sobre o maior evento audiovisual universitário
             do Brasil.
-          </span>
-          <Button
-            asChild
-            className="mt-6 flex gap-2"
-            size="lg"
-            variant="primary"
+          </motion.span>
+          <motion.div
+            initial={{ y: 100, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 1.25, ease: "easeInOut" }}
+            className="mt-6"
           >
-            <a href="#event">
-              <BsMouse />
-              Saiba Mais
-            </a>
-          </Button>
+            <Button asChild className="flex gap-2" size="lg" variant="primary">
+              <a href="#event">
+                <BsMouse />
+                Saiba Mais
+              </a>
+            </Button>
+          </motion.div>
         </div>
       </div>
     </div>

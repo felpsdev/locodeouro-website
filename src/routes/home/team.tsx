@@ -1,7 +1,7 @@
 import { BsArrowRight, BsPeople } from "react-icons/bs";
 import { Button, Divider } from "../../components/ui";
 
-import teamAsset from "../../assets/team.jpg";
+import teamAsset from "../../assets/home/team.jpg";
 
 function Team() {
   return (

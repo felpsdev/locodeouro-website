@@ -2,7 +2,7 @@ import { cn } from "@sglara/cn";
 import { cva, type VariantProps } from "class-variance-authority";
 import { forwardRef } from "react";
 
-const inputVariants = cva(
+const textAreaVariants = cva(
   "inline-flex items-center leading-none justify-center rounded-md font-medium transition-colors disabled:pointer-events-none",
   {
     variants: {
@@ -24,21 +24,21 @@ const inputVariants = cva(
   },
 );
 
-export interface InputProps
-  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "size">,
-    VariantProps<typeof inputVariants> {}
+export interface TextAreaProps
+  extends Omit<React.TextareaHTMLAttributes<HTMLTextAreaElement>, "size">,
+    VariantProps<typeof textAreaVariants> {}
 
-const Input = forwardRef<HTMLInputElement, InputProps>(
+const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
   ({ className, variant, size, ...props }, ref) => {
     return (
-      <input
-        className={cn(inputVariants({ variant, size, className }))}
+      <textarea
+        className={cn(textAreaVariants({ variant, size, className }))}
         ref={ref}
         {...props}
       />
     );
   },
 );
-Input.displayName = "Input";
+TextArea.displayName = "TextArea";
 
-export default Input;
+export default TextArea;

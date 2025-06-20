@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "../../components/header";
 
+import Footer from "../../components/footer";
 import ContactUs from "./contact_us";
 import Event from "./event";
 import HowItWorks from "./how_it_works";
@@ -27,7 +28,7 @@ function Home() {
       <Patreons />
       <ContactUs />
 
-      {/* Footer */}
+      <Footer />
     </div>
   );
 }
